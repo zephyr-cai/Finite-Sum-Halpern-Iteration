@@ -185,11 +185,11 @@ if __name__ == "__main__":
     res_cnt = list()
 
     while cnt <= N:
-        lam = 2 / (i + 5)
+        lam = 2 / (i + 4)
         if i <= 1:
             toss = 1
-        elif i + 1 <= np.sqrt(n):
-            p = 4 / (i + 6)
+        elif i - 1 <= np.sqrt(n):
+            p = 4 / (i + 4)
             toss = np.random.binomial(1, p)
         else:
             p = 4 / (np.sqrt(n) + 5)
