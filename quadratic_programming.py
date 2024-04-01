@@ -61,8 +61,8 @@ if __name__ == "__main__":
     A = np.zeros((n, n))
     for i in range(n):
         A[i][n - 1 - i] = 1
-    if i < n - 1:
-        A[i][n - 2 - i] = -1
+        if i < n - 1:
+            A[i][n - 2 - i] = -1
     A /= 4
     H = 2 * A.T.dot(A)
     b = np.ones(n) / 4
