@@ -32,6 +32,8 @@ def projection(y, a=1):
     tmp = np.zeros(d)
     for i in range(d):
         tmp[i] = max(y[i] - tau, 0)
+    
+    return tmp
 
 
 # Extragradient update (full)
