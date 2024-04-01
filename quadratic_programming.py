@@ -185,11 +185,11 @@ if __name__ == "__main__":
     res_cnt = list()
 
     while cnt <= N:
-        lam = 2 / (i + 4)
+        lam = 2 / (i + 5)
         if i <= 1:
             toss = 1
-        elif i - 1 <= np.sqrt(n):
-            p = 4 / (i + 4)
+        elif i + 1 <= np.sqrt(n):
+            p = 4 / (i + 6)
             toss = np.random.binomial(1, p)
         else:
             p = 4 / (np.sqrt(n) + 5)
@@ -200,7 +200,7 @@ if __name__ == "__main__":
                 res = np.sqrt(np.linalg.norm(gx)**2 + np.linalg.norm(gy)**2)
                 res_cocoHalpern.append(res)
                 res_cnt.append(cnt)
-                x_prev, y_prev = x, y
+            x_prev, y_prev = x, y
             x = lam * x_0 + x - lam * x - eta * gx
             y = lam * y_0 + y - lam * y - eta * gy
             cnt += n
